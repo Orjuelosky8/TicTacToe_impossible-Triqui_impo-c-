@@ -16,6 +16,9 @@ int main(int argc, char const *argv[])
 {
     char aux;
     bool end_g;  //End_g : end of the game (fin del juego)
+    cout<<"\nBienvendio al triqui donde no podras ganar jeje (nivel Dios)\n";
+    cout<<"\nTe presentamos a la maquina con la que jugaras, \n\tSu nombre es Xavi\n";
+    system("pause");
     do
     {
         turno_pc();
@@ -24,7 +27,6 @@ int main(int argc, char const *argv[])
             turno_person();
 
     } while(end_g == false);
-    system("color 0C");
     cout<<"\n\nDesea observar como quedo finalmente el tablero?";
     cout<<"\n\t1. Si";
     cout<<"\n\t2. No";
@@ -65,7 +67,6 @@ void print(){
 void turno_person(){
     char x, y;
     int posx, posy;
-    system("color 0E"); 
     cout<<"\n\n\t------- AHORA ES SU TURNO -------\n";
     do
     {
@@ -79,7 +80,7 @@ void turno_person(){
             case '3': posx = 2; break;
             default: cout<<"\nDigito incorrecto, a continuacion debera intentarlo de nuevo.\n"; break;
         }
-        cout<<"\nDigite la fila en la que que desea colocarlo (A - C): ";
+        cout<<"\nDigite la columna en la que que desea colocarlo (A - C): ";
         cin>>y;
         switch (y)
         {
@@ -101,7 +102,6 @@ void turno_person(){
 
 void turno_pc(){
     system("cls");
-    system("color 0A"); 
     int cont=0, aux, aux2;
     bool done=false;
     for (int i = 0; i < 3; i++)
